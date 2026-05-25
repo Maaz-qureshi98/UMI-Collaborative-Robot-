@@ -1,0 +1,12 @@
+services:
+  umi:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    container_name: umi-dev
+    volumes:
+      - .:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
